@@ -15,6 +15,7 @@ class Config:
     __configfile = Path(f'{Path.home()}/config.ini')
 
     def __init__(self):
+        print(f'Home is: {Path.home()}')
         self.token = self.__get_token_from_environment()
         if self.token is None:
             self.token = self.__get_token_from_config()
